@@ -1,0 +1,93 @@
+.cardContainer{
+    display: flex;
+    width : 100%;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 10px 10px 10px -9px rgba(214,214,214,0.62);
+    -moz-box-shadow: 10px 10px 10px -9px rgba(214,214,214,0.62);
+    box-shadow: 10px 10px 10px -9px rgba(214,214,214,0.62);
+    padding : 1rem;
+
+    .logoContainer{
+        margin : 1rem;
+    }
+    .leftContainer{
+        display: flex;
+        margin : 1rem;
+        flex-direction: column;
+        // width : 0%;
+        .top{
+            display: flex;
+            margin-bottom: .5rem;
+            // justify-content: center;
+            align-items: center;
+            .jobName{
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+            .company{
+                display: flex;
+                padding-left : .7rem;
+                opacity: .6;
+                font-size: .8rem;
+            }
+        }
+        .bottom{
+            display: flex;   
+            .badge{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #EFF2F7;
+                padding : .4rem .6rem;
+                border-radius: .2rem;
+                margin : .3rem;
+                text-transform: uppercase;
+                font-size: .7rem;
+
+                &:first-child{
+                    margin-left: 0rem;
+                }
+            }
+        }
+    }
+    .rightContainer{
+        // width: 50%;
+        margin : 1rem;
+        flex-direction: column;
+        display: flex;
+        align-items: flex-end;
+        .top{
+            display: flex;   
+            margin-bottom: 1rem;
+            .badge{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #66DF8C;
+                color : rgb(255, 255, 255);
+                padding : .2rem .5rem;
+                border-radius: .2rem;
+                text-transform: uppercase;
+                font-size: .7rem;
+                font-weight: 800;
+            }
+        }
+        .bottom{
+            display: flex;  
+            color: #adaeaf;
+            font-size: .9rem;
+            .salary{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin : .5rem;
+                font-weight: bold;
+            }
+            .location{
+                margin: .5rem 0 .5rem .5rem ;
+                font-weight: bold;
+            }
+        }
+    }
+}

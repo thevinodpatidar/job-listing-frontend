@@ -1,0 +1,35 @@
+.searchWrapper{
+    display : flex;
+    flex-direction : column;
+    background-color : #5169FA;
+    justify-content : center;
+    align-items : center;
+    padding : 3rem; 
+
+    h1{
+        color : #fff;
+    }
+    .searchBarWrapper{
+        display : flex;
+        margin : 2rem;
+        .searchBar{
+            line-height : 2.5rem;
+            width : 400px;
+            padding-left : 1rem;
+            outline : none;
+            border : none;
+            border-radius : 2rem;
+        }
+    }
+    h3{
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        color : #fff; 
+    }
+}
+.jobWrapper{
+    display : flex;
+    // justify-content : center;
+    margin-left:  10rem;
+}

@@ -1,0 +1,42 @@
+import React from 'react'
+import styles from "./JobCard.module.scss";
+
+function JobCard(props) {
+    // console.log(props.job.jobName);
+    return (
+        <div className={styles.cardContainer}>
+            <div className={styles.logoContainer}>
+                {/* <img src="https://img.icons8.com/color/48/000000/google-logo.png"/> */}
+                <img src="https://img.icons8.com/color/48/000000/microsoft.png"/>
+            </div>
+            <div className={styles.leftContainer}>
+                <div className={styles.top}>
+                    <span className={styles.jobName}>{props.job.jobName}</span>
+                    <span className={styles.company}>{props.job.company.companyName}</span>
+                </div>
+                <div className={styles.bottom}>
+                    {
+                        props.job.technologies.map((tech,index)=>{
+                            return <span key={index} className={styles.badge}>{tech.technologyName}</span>
+                        })
+                    }
+                    {/* // <span className={styles.badge}>Frontend Developer</span>
+                    // <span className={styles.badge}>Frontend Developer</span> */}
+                </div>
+            </div>
+            <div className={styles.rightContainer}>
+                <div className={styles.top}>
+                    <span className={styles.badge}>{props.job.jobType}</span>
+                </div>
+                <div className={styles.bottom}>
+                    <span className={styles.salary}>$ {props.job.salary}</span>
+                    <div className={styles.location}>
+                        <span>Krakow, Poland</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default JobCard;
