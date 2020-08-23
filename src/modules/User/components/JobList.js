@@ -7,7 +7,7 @@ function JobList() {
     const [jobs,setJobs] = useState([]);
 
     useEffect(() => {
-        const res = fetch("http://localhost:8000/v1/api/jobs").then(response => response.json()).then(data => {
+        const res = fetch("https://api-getjob.herokuapp.com/v1/api/jobs").then(response => response.json()).then(data => {
             console.log(data)
             setJobs(data.data)
     });
