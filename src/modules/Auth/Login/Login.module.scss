@@ -1,0 +1,83 @@
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin : 2rem auto;
+    -webkit-box-shadow: 10px 10px 10px -9px rgba(214,214,214,0.62);
+    -moz-box-shadow: 10px 10px 10px -9px rgba(214,214,214,0.62);
+    box-shadow: 10px 10px 10px -9px rgba(214,214,214,0.62);
+
+    .topContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding : 1.5rem 3rem;
+        .heading{
+            font-size: 2.2rem;
+        }
+        .alreadyAccount{
+            margin-top: .6rem;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+    .fields{
+        display: flex;
+        flex-direction: column;
+        .field{
+            display: flex;
+            flex-direction: column;
+            margin : .4rem 3rem;
+            label{
+                margin-bottom: .5rem;
+                font-weight: 700;
+            }
+            input{
+                padding : .5rem 1rem;
+                line-height: 2rem;
+            }
+        }
+        .showPassword{
+            display: flex;
+            align-items: center;
+            margin : .4rem 3.2rem;
+            .password{
+                padding-left: .6rem;
+                font-weight: 600;
+            }
+        }
+        .loginButton{
+            display: inline-block;
+            margin: .5rem 3rem;
+            button{
+                background-color: #5CC878;
+                outline : none;
+                border : none;
+                width : 100%;
+                padding : .5rem 1rem;
+                color : #fff;
+                font-size : 1.5rem;
+                font-weight: 700;
+                border-radius: .23rem;
+                cursor: pointer;
+            }
+        }
+    }
+    .break{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin : .5rem;
+    }
+    .socialLogin {
+        display: flex;
+        justify-content: center;
+        margin : 1rem;
+        .google{
+            padding: .4rem;
+        }
+        .facebook{
+            padding: .4rem;
+        }
+    }
+}

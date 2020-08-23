@@ -7,7 +7,7 @@ function JobCard(props) {
         <div className={styles.cardContainer}>
             <div className={styles.logoContainer}>
                 {/* <img src="https://img.icons8.com/color/48/000000/google-logo.png"/> */}
-                <img src="https://img.icons8.com/color/48/000000/microsoft.png"/>
+                <img src="https://img.icons8.com/color/48/000000/microsoft.png" alt="company" />
             </div>
             <div className={styles.leftContainer}>
                 <div className={styles.top}>
