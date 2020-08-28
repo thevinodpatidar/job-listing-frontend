@@ -1,0 +1,59 @@
+.filterSectionWrapper{
+    display : flex;
+    flex-direction : column;
+    margin : 3rem 0rem;
+    width: 25%;
+    .categoryContainer{
+        h3{
+            padding : 1rem 0.2rem;
+        }
+    }
+    .typeContainer{
+        margin-top: 2rem;
+        h3{
+            padding : 1rem 0.2rem;
+        }
+        .typeWrapper{
+            -webkit-box-shadow: 10px 10px 60px -30px rgba(214,214,214,0.62);
+            -moz-box-shadow: 10px 10px 60px -30px rgba(214,214,214,0.62);
+            box-shadow: 10px 10px 60px -30px rgba(214,214,214,0.62);
+            padding : 1rem;
+            .types{
+                list-style: none;
+                .type{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1rem 0rem;
+                    input{
+                       cursor: pointer; 
+                    }
+                }
+            }
+        }
+    }
+    .salaryContainer{
+        margin-top: 2rem;
+        h3{
+            padding : 1rem 0.2rem;
+        }
+        .salaryWrapper{
+            -webkit-box-shadow: 10px 10px 60px -30px rgba(214,214,214,0.62);
+            -moz-box-shadow: 10px 10px 60px -30px rgba(214,214,214,0.62);
+            box-shadow: 10px 10px 60px -30px rgba(214,214,214,0.62);
+            padding : 1rem;
+            .salaries{
+                list-style: none;
+                .salary{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1rem 0rem;
+                    input{
+                       cursor: pointer; 
+                    }
+                }
+            }
+        }
+    }
+}

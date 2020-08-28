@@ -3,7 +3,7 @@ import JobCard from './JobCard';
 
 import styles from "./JobList.module.scss";
 import { Link, useRouteMatch } from 'react-router-dom';
-import Loader from '../../../components/Loader';
+import Loader from '../../shared/Loader/Loader';
 
 function JobList() {
     const [jobs,setJobs] = useState([]);

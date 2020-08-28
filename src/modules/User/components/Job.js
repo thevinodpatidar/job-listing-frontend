@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from "./Job.module.scss";
 import { useRouteMatch } from 'react-router-dom';
-import Loader from '../../../components/Loader';
+import Loader from '../../shared/Loader/Loader';
 
 function Job() {
     const [job,setJob] = useState([]);
