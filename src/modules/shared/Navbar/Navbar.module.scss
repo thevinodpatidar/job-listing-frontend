@@ -5,6 +5,10 @@
     align-items : center;
     .logo{
         display : flex;
+        .logoLink{
+            text-decoration: none;
+            color : #fff;
+        }
     }
     .links{
         display : flex;

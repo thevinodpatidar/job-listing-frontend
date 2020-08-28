@@ -17,7 +17,7 @@ function Jobs() {
         </div>
         <div className={styles.jobWrapper}>
             <JobList />
-            <JobFilter />
+            {/* <JobFilter /> */}
         </div>
         </>
     )

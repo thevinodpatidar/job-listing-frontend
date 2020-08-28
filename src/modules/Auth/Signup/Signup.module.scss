@@ -1,4 +1,4 @@
-.loginContainer{
+.signupContainer{
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -19,11 +19,10 @@
             margin-top: .6rem;
             font-size: 1rem;
             font-weight: 500;
-            list-style: none;
-            .signupLink{
-                    text-decoration: none;
-                    color : #5CC878;
-            }
+            .loginLink{
+                text-decoration: none;
+                color : #5CC878;
+        }
         }
     }
     .fields{
@@ -51,7 +50,7 @@
                 font-weight: 600;
             }
         }
-        .loginButton{
+        .signupButton{
             display: inline-block;
             margin: .5rem 3rem;
             button{

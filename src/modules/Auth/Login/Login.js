@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
 import styles from "./Login.module.scss";
+import { Link } from 'react-router-dom';
 
-class LoginPage extends Component {
+class Login extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      checked : false
+    }
+  }
+  togglePassword (event){
+    this.setState({checked : !this.state.checked})
+  }
+
   render() {
     console.log(this.props);
     return (
     <form>
       <div className={styles.loginContainer}>
         <div className={styles.topContainer}>
-          <span className={styles.heading}>Create an account</span>
-          <span className={styles.alreadyAccount}>Already have an account? Log in now</span>
+          <span className={styles.heading}>Welcome back,</span>
+          <span className={styles.alreadyAccount}>Don't have an account? <Link to="/signup" className={styles.signupLink}>Sign up now</Link></span>
         </div>
         <div className={styles.fields}>
           <div className={styles.field}>
@@ -18,10 +30,10 @@ class LoginPage extends Component {
           </div>
           <div className={styles.field}>
             <label>Password:</label>
-            <input type="password" required></input>
+            <input type={this.state.checked ? 'text' : 'password'} required></input>
           </div>
           <div className={styles.showPassword}>
-            <input type="checkbox"></input>
+            <input type="checkbox" onChange={(e)=> this.togglePassword(e)}></input>
             <span className={styles.password}>Show Password</span>
           </div>
           <div className={styles.loginButton}>
@@ -29,7 +41,7 @@ class LoginPage extends Component {
           </div>
         </div>
         <div className={styles.break}>
-          <span>or go with</span>
+          <span>or</span>
         </div>
         <div className={styles.socialLogin} >
           <div className={styles.google}>
@@ -45,4 +57,4 @@ class LoginPage extends Component {
   }
 }
 
-export default LoginPage;
+export default Login;

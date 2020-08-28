@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from "./JobCard.module.scss";
+import { Link } from 'react-router-dom';
 
 function JobCard(props) {
     // console.log(props.job.jobName);
     return (
+        <Link className={styles.job} to={`/jobs/${props.job.id}`}>
         <div className={styles.cardContainer}>
             <div className={styles.logoContainer}>
                 {/* <img src="https://img.icons8.com/color/48/000000/google-logo.png"/> */}
@@ -36,6 +38,7 @@ function JobCard(props) {
                 </div>
             </div>
         </div>
+        </Link>
     )
 }
 

@@ -3,23 +3,32 @@ import JobCard from './JobCard';
 
 import styles from "./JobList.module.scss";
 import { Link, useRouteMatch } from 'react-router-dom';
+import Loader from '../../../components/Loader';
 
 function JobList() {
     const [jobs,setJobs] = useState([]);
-    const match = useRouteMatch();
-    console.log(match);
+    const [isLoading,setIsLoading] = useState(true);
+    // const match = useRouteMatch();
+    const fetchJobs = async()=>{
+        const res = await fetch("https://api-getjob.herokuapp.com/v1/api/jobs");
+        // const res = await fetch("https://api-getjob.herokuapp.com/v1/api/jobs");
+        const data = await res.json();
+        setJobs(data.data);
+        setIsLoading(false);
+
+    }
     useEffect(() => {
-        fetch("https://api-getjob.herokuapp.com/v1/api/jobs").then(response => response.json()).then(data => {
-            console.log(data)
-            setJobs(data.data)
-    });
+        // setIsLoading(true);
+        fetchJobs()
     }, [])
 
     return (
         <div className={styles.jobListWrapper}>
             {
+                isLoading ? <Loader />
+                :
                 jobs.map((job,index)=>{
-                    return <Link className={styles.job} to={`/jobs/${job.id}`} key={index}><JobCard job={job} /></Link>
+                    return <JobCard key={index} job={job} />
                 })
             }
         </div>
