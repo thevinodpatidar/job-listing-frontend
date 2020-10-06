@@ -22,6 +22,8 @@ function JobList() {
         fetchJobs()
     }, [])
 
+    console.log(jobs);
+
     return (
         <div className={styles.jobListWrapper}>
             {

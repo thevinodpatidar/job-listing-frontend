@@ -7,10 +7,8 @@ import { Provider } from 'react-redux';
 // import store from './store';
 
 ReactDOM.render(
-    <Router>
-      {/* <Provider store={store}> */}
+    <Router >
         <App />
-      {/* </Provider> */}
     </Router>,
   document.getElementById('root')
 );

@@ -3,7 +3,7 @@ import styles from "./JobCard.module.scss";
 import { Link } from 'react-router-dom';
 
 function JobCard(props) {
-    // console.log(props.job.jobName);
+    console.log(props);
     return (
         <Link className={styles.job} to={`/jobs/${props.job.id}`}>
         <div className={styles.cardContainer}>
